@@ -1,11 +1,14 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+
 import App from './App.vue'
 import router from './router'
 import { BASE_URL } from './configurations/HttpConfiguration'
 
-Vue.config.productionTip = false
+const app = createApp(App)
 
-Vue.prototype.$filters = {
+app.use(router)
+
+app.config.globalProperties.$filters = {
     truncate(value: string = "", maxLength: number = 0) {
         if (value.length > maxLength) {
             return value.substring(0, maxLength) + '...';
@@ -27,7 +30,4 @@ Vue.prototype.$filters = {
     },
 }
 
-new Vue({
-    router,
-    render: h => h(App)
-}).$mount('#app')
+app.mount('#app')
