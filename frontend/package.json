@@ -20,7 +20,7 @@
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
     "@types/node": "^20.11.28",
-    "@vitejs/plugin-vue2": "2.0.3",
+    "@vitejs/plugin-vue2": "^1.10.2",
     "npm-run-all": "^6.1.2",
     "typescript": "~5.4.0",
     "vite": "^5.1.6",
